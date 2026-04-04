@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy â Next Move</title>
+  <meta name="description" content="Privacy policy for Next Move Technologies, Inc. We collect minimal data, store no personal information, and never sell user data to third parties.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nextmove.one/privacy">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Privacy Policy â Next Move">
+  <meta property="og:description" content="Next Move's privacy policy. We prioritize your privacy and protect your data.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nextmove.one/privacy">
+  <meta property="og:site_name" content="Next Move">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --accent: #00c896;
+      --accent-dark: #00a87d;
+      --bg-dark: #0d1117;
+      --bg-card: #161b22;
+      --bg-card-hover: #1c2129;
+      --text-primary: #f0f6fc;
+      --text-secondary: #8b949e;
+      --text-muted: #6e7681;
+      --border: #30363d;
+      --radius: 12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-dark); }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+      backdrop-filter: blur(20px);
+      background: rgba(13, 17, 23, 0.85);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { color: var(--text-secondary); font-size: 0.95rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--text-primary); }
+    .nav-links a.active { color: var(--accent); }
+
+    .container { max-width: 900px; margin: 0 auto; }
+    section { padding: 6rem 2rem; }
+
+    .section-label {
+      text-transform: uppercase; font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.1em; color: var(--accent); margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800; letter-spacing: -0.03em;
+      line-height: 1.15; margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 800; letter-spacing: -0.02em;
+      line-height: 1.2; margin-bottom: 1.25rem;
+    }
+
+    h3 {
+      font-size: 1.1rem; font-weight: 700;
+      margin-bottom: 0.75rem; margin-top: 1.5rem; color: var(--text-primary);
+    }
+
+    .page-header {
+      padding-top: 10rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-header p {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+      line-height: 1.8;
+    }
+
+    /* POLICY CONTENT */
+    .policy-content { border-bottom: 1px solid var(--border); }
+
+    .policy-content p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    .policy-content li {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      margin-bottom: 0.5rem;
+      margin-left: 1.5rem;
+    }
+
+    .policy-content ul {
+      margin-bottom: 1.5rem;
+    }
+
+    .policy-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .last-updated {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .footer-content {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-left { font-size: 0.9rem; color: var(--text-muted); }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { font-size: 0.9rem; color: var(--text-secondary); }
+
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); border: 0;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem; }
+      section { padding: 4rem 1.5rem; }
+      .page-header { padding-top: 7rem; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="logo" aria-label="Next Move home">Next<span>Move</span></a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="index.html#demo">Request Demo</a>
+      <a href="index.html#talk">Schedule a Call</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <p class="section-label">Privacy Policy</p>
+      <h1>Your privacy is our priority</h1>
+      <p>
+        We collect minimal data, never sell to third parties, and store no personal information.
+        This policy explains exactly how we handle the information you share with us.
+      </p>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="policy-content" aria-labelledby="policy-heading">
+      <div class="container">
+
+        <p class="last-updated">Last updated: April 4, 2026</p>
+
+        <div class="policy-section" id="policy-heading">
+          <h2>Privacy Policy</h2>
+          <p>
+            Next Move Technologies, Inc. ("Next Move," "we," "our," or "us") is committed to protecting
+            your privacy. This Privacy Policy explains what information we collect, how we use it, and how
+            we protect it when you use our platform and website.
+          </p>
+        </div>
+
+        <div class="policy-section">
+          <h3>1. Information We Collect</h3>
+          <p>We collect minimal information and only what is necessary to operate the platform and respond to your inquiries:</p>
+          <ul>
+            <li><strong>Email Signup Forms:</strong> Email address only. We collect emails when you sign up for updates or request platform information.</li>
+            <li><strong>Demo Request Forms:</strong> Name, email, phone (optional), organization, and role. This information helps us respond to your request and schedule a demo.</li>
+            <li><strong>Anonymized Usage Analytics:</strong> We track platform engagement using anonymized universally unique identifiers (UUIDs). We do not collect, store, or track personally identifiable information (PII). Analytics include: page views, feature interactions, time spent on platform, and completion rates. All data is associated only with a UUIDânot a name, account, or identity.</li>
+            <li><strong>No User Accounts Required:</strong> The platform does not require logins, user accounts, or personal authentication. Players interact with the platform anonymously.</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>2. How We Use Information</h3>
+          <p>We use the information we collect for limited, specific purposes:</p>
+          <ul>
+            <li><strong>Email Inquiries:</strong> To respond to signup requests, answer questions, and send relevant platform updates (only if you've opted in).</li>
+            <li><strong>Demo Requests:</strong> To schedule and conduct product demonstrations with organizations interested in licensing the platform.</li>
+            <li><strong>Platform Improvement:</strong> To analyze anonymized usage patterns and improve the platform's features, content, and user experience.</li>
+            <li><strong>Evaluation and Research:</strong> To measure engagement and outcomes as part of our evaluation partnership with Ithaka S+R, using only aggregated, de-identified data.</li>
+          </ul>
+          <p>
+            We do not use your information for marketing purposes beyond educational outreach about the platform,
+            and we never sell, rent, or share your data with third parties.
+          </p>
+        </div>
+
+        <div class="policy-section">
+          <h3>3. Information Sharing</h3>
+          <p>We are committed to keeping your information private:</p>
+          <ul>
+            <li><strong>No Third-Party Sales:</strong> We do not sell your personal information to any third parties, period.</li>
+            <li><strong>No Data Sharing with Marketing Partners:</strong> We do not share email addresses or contact information with marketing companies, data brokers, or commercial partners.</li>
+            <li><strong>Institutional Partners:</strong> If your organization licenses the platform (Departments of Corrections, supervision agencies, community programs), we may share aggregated, de-identified usage data to report on platform engagement and outcomes. Personal information is never included.</li>
+            <li><strong>Legal Requirements:</strong> We may disclose information if required by law, court order, or government request. We will make reasonable efforts to notify you of such requests unless prohibited by law.</li>
+            <li><strong>Service Providers:</strong> We may engage third-party service providers (e.g., cloud hosting, analytics) who process data only as instructed and are bound by confidentiality agreements.</li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <h3>4. Data Security</h3>
+          <p>
+            Next Move takes data security seriously. We implement industry-standard security measures to protect
+            information from unauthorized access, alteration, or destruction:
+          </p>
+          <ul>
+            <li>HTTPS encryption for all data in transit</li>
+            <li>Secure hosting on Amazon Web Services (AWS) with encryption at rest</li>
+            <li>Regular security reviews and vulnerability assessments</li>
+            <li>Access controls and authentication protocols for internal systems</li>
+            <li>CJIS compliance standards for correctional system deployments</li>
+          </ul>
+          <p>
+            While we implement robust security practices, no system is completely secure. If you believe your information
+            has been compromised, please contact us immediately at <a href="mailto:hello@nextmove.one">hello@nextmove.one</a>.
+          </p>
+        </div>
+
+        <div class="policy-section">
+          <h3>5. Children's Privacy</h3>
+          <p>
+            Next Move is designed for adults in high-stakes life transitionsâprimarily incarcerated and formerly
+            incarcerated individuals age 18 and older, veterans, individuals aging out of foster care, and others
+            navigating complex reentry and transition scenarios. We do not knowingly collect personal information
+            from children under 13. If we become aware that we have collected information from a child under 13
+            without verifiable parental consent, we will delete that information promptly. Parents or guardians who
+            believe a child has provided information to us should contact us at
+            <a href="mailto:hello@nextmove.one">hello@nextmove.one</a>.
+          </p>
+        </div>
+
+        <div class="policy-section">
+          <h3>6. Changes to This Policy</h3>
+          <p>
+            We may update this Privacy Policy as our platform evolves and to comply with new regulations or best
+            practices. We will notify you of material changes by updating the "Last updated" date at the top of this
+            page and, if the change is significant, by sending an email notification or displaying a prominent notice
+            on our website. Your continued use of the platform after changes become effective constitutes your acceptance
+            of the updated policy.
+          </p>
+        </div>
+
+        <div class="policy-section">
+          <h3>7. Contact Us</h3>
+          <p>
+            If you have questions about this Privacy Policy, your information, or our privacy practices, please contact us at:
+          </p>
+          <ul>
+            <li><strong>Email:</strong> <a href="mailto:hello@nextmove.one">hello@nextmove.one</a></li>
+            <li><strong>Company:</strong> Next Move Technologies, Inc.</li>
+            <li><strong>Website:</strong> <a href="https://nextmove.one">nextmove.one</a></li>
+          </ul>
+        </div>
+
+        <div class="policy-section">
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 3rem;">
+            This Privacy Policy is effective as of April 4, 2026. Next Move Technologies, Inc. is a Delaware C-Corporation.
+            Next Moveâ¢ is a trademark of Next Move Technologies, Inc.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <p class="footer-left">&copy; 2026 Next Move Technologies, Inc. All rights reserved. Next Move&trade; is a trademark of Next Move Technologies, Inc. (USPTO filing pending.)</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:hello@nextmove.one">Contact</a>
+        <a href="mailto:investors@nextmove.one">Investor Inquiries</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
