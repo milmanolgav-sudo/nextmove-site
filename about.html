@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Next Move</title>
+  <meta name="description" content="Next Move builds decision training for every high-stakes life transition — reentry, veteran transition, foster care, domestic violence, recovery, court navigation. Meet the team.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nextmove.one/about">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="About — Next Move">
+  <meta property="og:description" content="Meet the team building decision training tools for high-stakes life transitions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nextmove.one/about">
+  <meta property="og:site_name" content="Next Move">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --accent: #00c896;
+      --accent-dark: #00a87d;
+      --bg-dark: #0d1117;
+      --bg-card: #161b22;
+      --bg-card-hover: #1c2129;
+      --text-primary: #f0f6fc;
+      --text-secondary: #8b949e;
+      --text-muted: #6e7681;
+      --border: #30363d;
+      --radius: 12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-dark); }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1rem 2rem;
+      display: flex; justify-content: space-between; align-items: center;
+      backdrop-filter: blur(20px);
+      background: rgba(13, 17, 23, 0.85);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { color: var(--text-secondary); font-size: 0.95rem; font-weight: 500; }
+    .nav-links a:hover { color: var(--text-primary); }
+    .nav-links a.active { color: var(--accent); }
+
+    .container { max-width: 900px; margin: 0 auto; }
+    section { padding: 6rem 2rem; }
+
+    .section-label {
+      text-transform: uppercase; font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.1em; color: var(--accent); margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800; letter-spacing: -0.03em;
+      line-height: 1.15; margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 800; letter-spacing: -0.02em;
+      line-height: 1.2; margin-bottom: 1.25rem;
+    }
+
+    .page-header {
+      padding-top: 10rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-header p {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+      line-height: 1.8;
+    }
+
+    /* MISSION */
+    .mission { border-bottom: 1px solid var(--border); }
+    .mission p {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
+    }
+
+    /* PRINCIPLES */
+    .principles { border-bottom: 1px solid var(--border); }
+    .principle-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .principle {
+      padding: 1.75rem 2rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-card);
+      transition: border-color 0.3s;
+    }
+    .principle:hover { border-color: var(--accent); }
+    .principle h3 {
+      font-size: 1.1rem; font-weight: 700;
+      margin-bottom: 0.5rem; color: var(--text-primary);
+    }
+    .principle p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; }
+
+    /* TEAM */
+    .team-section { border-bottom: 1px solid var(--border); }
+    .team-grid { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 2rem; }
+
+    .team-member {
+      padding: 2rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-card);
+    }
+
+    .team-member h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .team-member .role { font-size: 0.9rem; color: var(--accent); font-weight: 600; margin-bottom: 1rem; }
+    .team-member p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.75; }
+
+    /* PARTNERS */
+    .partners p {
+      font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .footer-content {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-left { font-size: 0.9rem; color: var(--text-muted); }
+    .footer-links { display: flex; gap: 1.5rem; }
+    .footer-links a { font-size: 0.9rem; color: var(--text-secondary); }
+
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); border: 0;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem; }
+      section { padding: 4rem 1.5rem; }
+      .page-header { padding-top: 7rem; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="logo" aria-label="Next Move home">Next<span>Move</span></a>
+    <div class="nav-links">
+      <a href="about.html" class="active">About</a>
+      <a href="index.html#demo">Request Demo</a>
+      <a href="index.html#talk">Schedule a Call</a>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <p class="section-label">About us</p>
+      <h1>Built by people who've<br>lived it themselves</h1>
+      <p>
+        Next Move is a decision training platform for high-stakes life transitions —
+        designed and built by people with lived experience in every area the platform touches.
+        We believe that when people can practice difficult decisions before the stakes are real,
+        they make better choices — and better outcomes follow.
+      </p>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="mission" aria-labelledby="mission-heading">
+      <div class="container">
+        <h2 id="mission-heading">Why we exist</h2>
+        <p>
+          Every year, millions of people face life-defining transitions with no safe way to practice
+          the decisions ahead. Someone leaving incarceration navigates housing, employment, and supervision
+          simultaneously. A veteran returning to civilian life rebuilds an entire identity. A young person
+          aging out of foster care makes adult decisions for the first time with no safety net. A domestic
+          violence survivor plans a safe exit while managing court orders and custody. A person in recovery
+          confronts every trigger the real world throws at them.
+        </p>
+        <p>
+          The decisions are interconnected, time-sensitive, and high-consequence. Getting one wrong can spiral.
+          There's no safe place to practice. Until now.
+        </p>
+        <p>
+          Next Move gives people the chance to navigate realistic branching scenarios —
+          experiencing consequences, building judgment, and developing strategies — before
+          the real decisions arrive. Our first module serves reentry and alternative-to-incarceration
+          (ATI) programs — currently available for New York, with state-by-state releases rolling out
+          across all 50 states, each reflecting that state's actual laws, programs, and resources.
+          Next up: veterans in transition and youth aging out of foster care. And we're building
+          toward every high-stakes life transition — domestic violence recovery, navigating court
+          systems, sustaining sobriety, and more.
+        </p>
+      </div>
+    </section>
+
+    <section class="principles" aria-labelledby="principles-heading">
+      <div class="container">
+        <h2 id="principles-heading">What we believe</h2>
+        <div class="principle-list" role="list">
+          <article class="principle" role="listitem">
+            <h3>People deserve practice, not just information</h3>
+            <p>Pamphlets and checklists aren't enough. Decision-making is a skill that improves with practice — especially under realistic conditions.</p>
+          </article>
+          <article class="principle" role="listitem">
+            <h3>The people closest to the problem are closest to the solution</h3>
+            <p>Our team includes people with lived experience across every domain the platform touches — incarceration, reentry, housing instability, recovery, domestic violence, court systems, workforce barriers, and family reunification. Every scenario is shaped by people who have navigated these decisions themselves.</p>
+          </article>
+          <article class="principle" role="listitem">
+            <h3>Language access is non-negotiable</h3>
+            <p>We ship in four languages from day one — English, Spanish, French, and Haitian Creole — because the communities most affected shouldn't have to wait for a translation.</p>
+          </article>
+          <article class="principle" role="listitem">
+            <h3>Never charge the people we serve</h3>
+            <p>The people we serve never pay — not for reentry, not for any module we build. Revenue comes from the institutions and agencies responsible for outcomes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="team-section" aria-labelledby="team-heading">
+      <div class="container">
+        <h2 id="team-heading">The team</h2>
+        <div class="team-grid">
+          <article class="team-member">
+            <h3>Olga Milman</h3>
+            <p class="role">CEO &amp; Founder</p>
+            <p>Product development, institutional relationships, funder development, and evaluation design. Justice-impacted. Builds Next Move's product directly, combining deep domain knowledge with hands-on technical execution.</p>
+          </article>
+          <article class="team-member">
+            <h3>Stacy Burnett</h3>
+            <p class="role">Director of Strategic Partnerships</p>
+            <p>Built JSTOR Access in Prison to over 1,000 correctional sites across four continents. Justice-impacted. Brings unmatched experience in scaling educational technology inside correctional systems.</p>
+          </article>
+          <article class="team-member">
+            <h3>Allen Brewer</h3>
+            <p class="role">Fractional CIO</p>
+            <p>Fortune 10 governance experience. Leads security architecture and CJIS compliance — ensuring Next Move meets the rigorous technical standards required by corrections agencies.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners" aria-labelledby="partners-heading">
+      <div class="container">
+        <h2 id="partners-heading">Our partners</h2>
+        <p>
+          Next Move partners with leading institutions in research and practice.
+          Our evaluation partner, <strong>Ithaka S+R</strong>, is conducting a 200-participant
+          quasi-experimental study to measure real-world outcomes. <strong>CASES NYC</strong>,
+          one of the nation's oldest alternative-to-incarceration programs, is our Phase 1 launch partner
+          for reentry. And students from <strong>BMCC</strong> contribute to development and authenticity
+          review, ensuring the platform reflects the lived experience of the communities it serves.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <p class="footer-left">&copy; 2026 Next Move Technologies, Inc. All rights reserved. Next Move&trade; is a trademark of Next Move Technologies, Inc. (USPTO filing pending.)</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="mailto:hello@nextmove.one">Contact</a>
+        <a href="mailto:investors@nextmove.one">Investor Inquiries</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
