@@ -56,8 +56,8 @@
       background: rgba(13, 17, 23, 0.85);
       border-bottom: 1px solid var(--border);
     }
-    .logo { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); }
-    .logo span { color: var(--accent); }
+    .logo { display: inline-flex; align-items: center; text-decoration: none; }
+    .logo img { height: 44px; width: auto; display: block; }
     .nav-links { display: flex; gap: 2rem; align-items: center; }
     .nav-links a { color: var(--text-secondary); font-size: 0.95rem; font-weight: 500; }
     .nav-links a:hover { color: var(--text-primary); }
@@ -164,7 +164,7 @@
 <body>
 
   <nav role="navigation" aria-label="Main navigation">
-    <a href="index.html" class="logo" aria-label="Next Move home">Next<span>Move</span></a>
+    <a href="index.html" class="logo" aria-label="Next Move home"><img src="logo.svg" alt="Next Move"></a>
     <div class="nav-links">
       <a href="about.html">About</a>
       <a href="index.html#demo">Request Demo</a>
