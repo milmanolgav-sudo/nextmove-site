@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Next Move — Decision Training for Life's Biggest Transitions</title>
+  <meta name="description" content="Next Move is a decision training platform for high-stakes life transitions — reentry from incarceration, veteran transition, foster care aging out, domestic violence recovery, court navigation, and more.">
+  <meta name="keywords" content="decision training, life transitions, reentry, veteran transition, foster care, domestic violence support, court navigation, recovery support, corrections technology, life skills training">
+  <meta name="author" content="Next Move Technologies, Inc.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nextmove.one/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Next Move — Decision Training for Life's Biggest Transitions">
+  <meta property="og:description" content="A decision training platform helping people practice the choices that shape their future. Now live in New York, expanding to all 50 states.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nextmove.one/">
+  <meta property="og:site_name" content="Next Move">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Next Move — Decision Training for Life's Biggest Transitions">
+  <meta name="twitter:description" content="A decision training platform helping people practice the choices that shape their future.">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Next Move Technologies, Inc.",
+    "url": "https://nextmove.one",
+    "description": "Decision training platform for high-stakes life transitions — reentry, veteran transition, foster care, domestic violence recovery, court navigation, and beyond.",
+    "foundingDate": "2025",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "hello@nextmove.one",
+      "contactType": "General Inquiry"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/nextmoveinc"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Next Move",
+    "url": "https://nextmove.one"
+  }
+  </script>
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --accent: #00c896;
+      --accent-dark: #00a87d;
+      --bg-dark: #0d1117;
+      --bg-card: #161b22;
+      --bg-card-hover: #1c2129;
+      --text-primary: #f0f6fc;
+      --text-secondary: #8b949e;
+      --text-muted: #6e7681;
+      --border: #30363d;
+      --radius: 12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-dark); }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(20px);
+      background: rgba(13, 17, 23, 0.85);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+    .logo span { color: var(--accent); }
+
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text-primary); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(0, 200, 150, 0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 2rem;
+      background: rgba(0, 200, 150, 0.05);
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      max-width: 800px;
+      margin-bottom: 1.5rem;
+    }
+    h1 .highlight { color: var(--accent); }
+
+    .hero-sub {
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin-bottom: 3rem;
+      line-height: 1.7;
+    }
+
+    /* CTA / EMAIL */
+    .email-form {
+      display: flex;
+      gap: 0.75rem;
+      max-width: 460px;
+      width: 100%;
+    }
+
+    .email-form input {
+      flex: 1;
+      padding: 0.85rem 1.2rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      font-size: 1rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .email-form input::placeholder { color: var(--text-muted); }
+    .email-form input:focus { border-color: var(--accent); }
+
+    .btn-primary {
+      padding: 0.85rem 1.8rem;
+      background: var(--accent);
+      color: var(--bg-dark);
+      font-weight: 700;
+      font-size: 1rem;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      white-space: nowrap;
+      font-family: inherit;
+    }
+    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+    .form-note {
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* SECTIONS */
+    section { padding: 6rem 2rem; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-text {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 640px;
+      line-height: 1.8;
+    }
+
+    /* PROBLEM */
+    .problem { border-top: 1px solid var(--border); }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .stat-card {
+      padding: 2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .stat-card:hover { border-color: var(--accent); background: var(--bg-card-hover); }
+
+    .stat-number {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* APPROACH */
+    .approach { border-top: 1px solid var(--border); }
+
+    .approach-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .feature {
+      padding: 2rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-card);
+      transition: border-color 0.3s, transform 0.2s;
+    }
+    .feature:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(0, 200, 150, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      font-size: 1.5rem;
+    }
+
+    .feature h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .feature p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* LANGUAGES */
+    .languages { border-top: 1px solid var(--border); }
+
+    .lang-grid {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .lang-tag {
+      padding: 0.75rem 1.5rem;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: var(--bg-card);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .lang-tag:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* DEMO REQUEST */
+    .demo-section {
+      border-top: 1px solid var(--border);
+    }
+
+    .demo-box {
+      margin-top: 2.5rem;
+      padding: 2.5rem;
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+      background: rgba(0, 200, 150, 0.03);
+    }
+
+    .demo-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .demo-form input,
+    .demo-form select {
+      padding: 0.85rem 1.2rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .demo-form input::placeholder { color: var(--text-muted); }
+    .demo-form input:focus,
+    .demo-form select:focus { border-color: var(--accent); }
+
+    .demo-form select { cursor: pointer; }
+    .demo-form select option { background: var(--bg-card); color: var(--text-primary); }
+
+    .demo-form .full-width { grid-column: 1 / -1; }
+
+    .demo-form .btn-demo {
+      grid-column: 1 / -1;
+      padding: 0.85rem 1.8rem;
+      background: var(--accent);
+      color: var(--bg-dark);
+      font-weight: 700;
+      font-size: 1rem;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      font-family: inherit;
+    }
+    .demo-form .btn-demo:hover { background: var(--accent-dark); transform: translateY(-1px); }
+
+    .demo-form.success input,
+    .demo-form.success select,
+    .demo-form.success .btn-demo { display: none; }
+    .demo-form.success::after {
+      content: 'Thank you! We\2019ll reach out shortly to schedule your demo.';
+      grid-column: 1 / -1;
+      display: block;
+      padding: 1rem 1.2rem;
+      background: rgba(0, 200, 150, 0.1);
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+      color: var(--accent);
+      font-weight: 600;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .demo-form { grid-template-columns: 1fr; }
+    }
+
+    /* TRACTION */
+    .traction { border-top: 1px solid var(--border); }
+
+    .traction-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .traction-item {
+      padding: 2rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-card);
+      transition: border-color 0.3s;
+    }
+    .traction-item:hover { border-color: var(--accent); }
+
+    .traction-item h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .traction-item p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .business-model {
+      margin-top: 2.5rem;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-card);
+    }
+
+    .business-model p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .business-model strong {
+      color: var(--text-primary);
+    }
+
+    /* INVESTOR SECTION */
+    .investor-section { border-top: 1px solid var(--border); }
+
+    .investor-box {
+      margin-top: 2.5rem;
+      padding: 2.5rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-card);
+      text-align: center;
+    }
+
+    .investor-box p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .investor-box p:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .investor-email {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 1.05rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    .investor-email:hover {
+      background: var(--accent);
+      color: var(--bg-dark);
+    }
+
+    .investor-disclaimer {
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .traction-grid { grid-template-columns: 1fr; }
+    }
+
+    /* SCHEDULE A CALL */
+    .schedule-section {
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .schedule-section .container {
+      max-width: 700px;
+    }
+
+    .schedule-section .section-text {
+      margin: 0 auto 2.5rem;
+    }
+
+    .schedule-options {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .schedule-card {
+      flex: 1;
+      min-width: 240px;
+      max-width: 320px;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg-card);
+      text-align: center;
+      transition: border-color 0.3s, transform 0.2s;
+    }
+    .schedule-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+    .schedule-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .schedule-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    .btn-schedule {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+    }
+    .btn-schedule:hover {
+      background: var(--accent);
+      color: var(--bg-dark);
+    }
+
+    .btn-schedule-primary {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background: var(--accent);
+      border: 2px solid var(--accent);
+      border-radius: var(--radius);
+      color: var(--bg-dark);
+      font-weight: 700;
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: background 0.2s, transform 0.1s;
+      text-decoration: none;
+    }
+    .btn-schedule-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); transform: translateY(-1px); }
+
+    /* CTA BOTTOM */
+    .cta-bottom {
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .cta-bottom .container {
+      max-width: 640px;
+    }
+
+    .cta-bottom .email-form {
+      margin: 0 auto;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-left {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      nav { padding: 1rem; }
+      .nav-links { gap: 1rem; }
+      .nav-links a { font-size: 0.85rem; }
+
+      .hero { padding: 7rem 1.5rem 3rem; }
+
+      .email-form {
+        flex-direction: column;
+      }
+
+      .problem-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .approach-features {
+        grid-template-columns: 1fr;
+      }
+
+      section { padding: 4rem 1.5rem; }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* ACCESSIBILITY */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    /* FORM SUCCESS STATE */
+    .email-form.success input,
+    .email-form.success button {
+      display: none;
+    }
+    .email-form.success::after {
+      content: 'Thank you! We\2019ll be in touch.';
+      display: block;
+      padding: 0.85rem 1.2rem;
+      background: rgba(0, 200, 150, 0.1);
+      border: 1px solid var(--accent);
+      border-radius: var(--radius);
+      color: var(--accent);
+      font-weight: 600;
+      text-align: center;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="/" class="logo" aria-label="Next Move home">Next<span>Move</span></a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="#demo">Request Demo</a>
+      <a href="#talk">Schedule a Call</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <span class="hero-badge" aria-hidden="true">Now Live in New York</span>
+    <h1>Practice the decisions<br>that <span class="highlight">change everything</span></h1>
+    <p class="hero-sub">
+      Next Move is a decision training platform for life's highest-stakes transitions —
+      built by people with lived experience in every area the platform touches.
+      We help people practice the choices that determine whether they rebuild successfully.
+    </p>
+    <form class="email-form" id="hero-form" aria-label="Email signup">
+      <label for="hero-email" class="sr-only">Email address</label>
+      <input type="email" id="hero-email" name="email" placeholder="Enter your email" required autocomplete="email">
+      <button type="submit" class="btn-primary">Get Notified</button>
+    </form>
+    <p class="form-note">Get updates as we expand to new states and modules. No spam, ever.</p>
+  </header>
+
+  <main>
+
+    <!-- THE PROBLEM -->
+    <section class="problem" id="problem" aria-labelledby="problem-heading">
+      <div class="container">
+        <p class="section-label">The challenge</p>
+        <h2 id="problem-heading">High-stakes transitions<br>deserve better preparation</h2>
+        <p class="section-text">
+          Millions of people face life-defining transitions every year with no safe way to practice the decisions ahead.
+          The consequences of being unprepared are devastating — for individuals, families, and communities.
+        </p>
+
+        <div class="problem-grid" role="list">
+          <article class="stat-card" role="listitem">
+            <p class="stat-number">1.9M</p>
+            <p class="stat-label">Reentry &amp; ATI programs</p>
+            <p class="stat-desc">People leaving incarceration and those in alternative-to-incarceration programs face an overwhelming cascade of decisions — housing, employment, supervision, benefits — with razor-thin margins for error. Launching in New York, expanding to all 50 states.</p>
+          </article>
+          <article class="stat-card" role="listitem">
+            <p class="stat-number">200K+</p>
+            <p class="stat-label">Veterans transitioning yearly</p>
+            <p class="stat-desc">Nearly half of post-9/11 veterans report difficulty transitioning to civilian life — navigating benefits, employment, housing, and healthcare systems simultaneously.</p>
+          </article>
+          <article class="stat-card" role="listitem">
+            <p class="stat-number">20K+</p>
+            <p class="stat-label">Youth aging out of foster care</p>
+            <p class="stat-desc">Every year, young people age out of the foster system with no safety net — facing housing, finances, healthcare, and legal decisions alone for the first time.</p>
+          </article>
+          <article class="stat-card" role="listitem">
+            <p class="stat-number">Millions</p>
+            <p class="stat-label">More transitions ahead</p>
+            <p class="stat-desc">Domestic violence survivors rebuilding safety. People in recovery navigating sobriety. Families facing court systems for the first time. Every high-stakes transition deserves better preparation.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR APPROACH -->
+    <section class="approach" id="approach" aria-labelledby="approach-heading">
+      <div class="container">
+        <p class="section-label">Our approach</p>
+        <h2 id="approach-heading">Learn by doing, not by reading</h2>
+        <p class="section-text">
+          Next Move uses interactive decision training — realistic branching scenarios where every choice has consequences.
+          Players navigate the same decisions they'll face in real life, building judgment before the stakes are real.
+        </p>
+
+        <div class="approach-features" role="list">
+          <article class="feature" role="listitem">
+            <div class="feature-icon" aria-hidden="true">&#x1F3AF;</div>
+            <h3>Realistic Scenarios</h3>
+            <p>Every decision node is grounded in real-world data — actual housing rules, benefit eligibility, court procedures, and employment barriers specific to each state and situation.</p>
+          </article>
+          <article class="feature" role="listitem">
+            <div class="feature-icon" aria-hidden="true">&#x1F30D;</div>
+            <h3>Four Languages</h3>
+            <p>Built from day one in English, Spanish, French, and Haitian Creole — reaching communities that other platforms overlook entirely.</p>
+          </article>
+          <article class="feature" role="listitem">
+            <div class="feature-icon" aria-hidden="true">&#x1F4F1;</div>
+            <h3>Built for Access</h3>
+            <p>Runs on any device — correctional tablets, phones, shared computers at shelters and reentry programs, VA resource centers, courthouses, and public libraries. No downloads, no accounts, no personal information collected.</p>
+          </article>
+          <article class="feature" role="listitem">
+            <div class="feature-icon" aria-hidden="true">&#x1F5FA;</div>
+            <h3>State by State</h3>
+            <p>Currently available for New York, with state-specific releases rolling out across all 50 states. Each version reflects that state's actual supervision rules, housing programs, employment laws, Medicaid status, and cost of living.</p>
+          </article>
+          <article class="feature" role="listitem">
+            <div class="feature-icon" aria-hidden="true">&#x1F91D;</div>
+            <h3>Lived Experience at Every Level</h3>
+            <p>Our team, advisors, and content reviewers include people with direct experience across every transition the platform serves — incarceration, reentry, housing instability, recovery, domestic violence, court systems, and more. We build with communities, not just for them.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LANGUAGES -->
+    <section class="languages" aria-labelledby="lang-heading">
+      <div class="container">
+        <p class="section-label">Multilingual by design</p>
+        <h2 id="lang-heading">Meeting people where they are</h2>
+        <p class="section-text">
+          Language access isn't an afterthought — it's foundational. Next Move ships in four languages from launch, because the communities most affected deserve tools that speak their language.
+        </p>
+        <div class="lang-grid" role="list">
+          <span class="lang-tag" role="listitem">English</span>
+          <span class="lang-tag" role="listitem">Espa&ntilde;ol</span>
+          <span class="lang-tag" role="listitem">Fran&ccedil;ais</span>
+          <span class="lang-tag" role="listitem">Krey&ograve;l Ayisyen</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- REQUEST A DEMO -->
+    <section class="demo-section" id="demo" aria-labelledby="demo-heading">
+      <div class="container">
+        <p class="section-label">For agencies &amp; partners</p>
+        <h2 id="demo-heading">Request a demo</h2>
+        <p class="section-text">
+          Work with a corrections agency, veterans organization, foster care program, domestic violence shelter,
+          court system, or recovery network? We'd love to show you how Next Move works.
+        </p>
+        <div class="demo-box">
+          <form class="demo-form" id="demo-form" aria-label="Request a demo">
+            <div>
+              <label for="demo-name" class="sr-only">Full name</label>
+              <input type="text" id="demo-name" name="name" placeholder="Full name" required>
+            </div>
+            <div>
+              <label for="demo-email" class="sr-only">Work email</label>
+              <input type="email" id="demo-email" name="email" placeholder="Work email" required autocomplete="email">
+            </div>
+            <div>
+              <label for="demo-phone" class="sr-only">Phone number</label>
+              <input type="tel" id="demo-phone" name="phone" placeholder="Phone number" autocomplete="tel">
+            </div>
+            <div>
+              <label for="demo-org" class="sr-only">Organization</label>
+              <input type="text" id="demo-org" name="organization" placeholder="Organization">
+            </div>
+            <div>
+              <label for="demo-role" class="sr-only">Your role</label>
+              <select id="demo-role" name="role">
+                <option value="" disabled selected>Your role</option>
+                <option value="doc">Corrections / Community Supervision</option>
+                <option value="veterans">Veterans Services</option>
+                <option value="foster">Foster Care / Youth Services</option>
+                <option value="dv-recovery">DV Shelter / Recovery Organization</option>
+                <option value="court">Court System / Legal Aid</option>
+                <option value="funder">Funder / Foundation</option>
+                <option value="research">Researcher / Evaluator</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-demo">Request Demo</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRACTION & PROOF -->
+    <section class="traction" id="traction" aria-labelledby="traction-heading">
+      <div class="container">
+        <p class="section-label">Traction &amp; partnerships</p>
+        <h2 id="traction-heading">Already in motion</h2>
+        <p class="section-text">
+          Next Move isn't a concept — it's a product with institutional partners, an evidence-based evaluation,
+          and a clear path to national scale.
+        </p>
+
+        <div class="traction-grid" role="list">
+          <article class="traction-item" role="listitem">
+            <h3>CASES NYC — Phase 1 Launch Partner</h3>
+            <p>One of the nation's oldest alternative-to-incarceration programs (founded 1967, 9,500+ diverted annually). Phase 1 pilot for reentry and ATI decision training.</p>
+          </article>
+          <article class="traction-item" role="listitem">
+            <h3>Ithaka S+R — Evaluation Partner</h3>
+            <p>200-participant quasi-experimental study over a 2-year timeline, measuring real-world outcomes including engagement, completion, knowledge gain, and recidivism reduction.</p>
+          </article>
+          <article class="traction-item" role="listitem">
+            <h3>Distribution Reach</h3>
+            <p>Built for the tablet platforms that already operate inside 6,270+ US correctional facilities — Securus, ViaPath, and Orijin — reaching incarcerated populations at scale.</p>
+          </article>
+          <article class="traction-item" role="listitem">
+            <h3>BMCC — Authenticity Pipeline</h3>
+            <p>Student developers with lived experience contribute to content development and authenticity review, ensuring every scenario reflects the real decisions people face.</p>
+          </article>
+        </div>
+
+        <div class="business-model">
+          <p>
+            <strong>How it works:</strong> Next Move is a B2B SaaS platform. Departments of Corrections and community supervision agencies
+            license the platform annually on a per-facility basis. We never charge incarcerated individuals or their families — not for
+            reentry, not for any module we build. Revenue comes from the institutions responsible for outcomes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INVESTOR INTEREST -->
+    <section class="investor-section" id="investors" aria-labelledby="investor-heading">
+      <div class="container">
+        <p class="section-label">For investors</p>
+        <h2 id="investor-heading">Funding what works</h2>
+        <p class="section-text">
+          Next Move sits at the intersection of criminal justice reform, edtech, and social impact — backed by
+          federal funding momentum, institutional partnerships, and a market that's ready for evidence-based solutions.
+        </p>
+
+        <div class="investor-box">
+          <p>
+            If you're an investor interested in social impact, corrections technology, or edtech —
+            we'd welcome a conversation about what we're building and where we're headed.
+          </p>
+          <a href="mailto:investors@nextmove.one" class="investor-email">investors@nextmove.one</a>
+          <p class="investor-disclaimer">
+            This is not a solicitation of investment or an offer to sell securities. Next Move Technologies, Inc. does not accept
+            investments through this website. Any investment discussion will be conducted privately and in compliance
+            with applicable securities laws.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHEDULE A CALL -->
+    <section class="schedule-section" id="talk" aria-labelledby="schedule-heading">
+      <div class="container">
+        <p class="section-label">Let's talk</p>
+        <h2 id="schedule-heading">Schedule a conversation</h2>
+        <p class="section-text">
+          Whether you're exploring a partnership, evaluating the platform for your agency,
+          or want to learn more about what we're building — pick a time that works for you.
+        </p>
+
+        <div class="schedule-options">
+          <div class="schedule-card">
+            <h3>15-Minute Intro</h3>
+            <p>Quick overview of Next Move and how it might fit your organization.</p>
+            <!-- TODO: Replace with your Calendly link -->
+            <a href="https://calendly.com/nextmove/intro" class="btn-schedule-primary">Book a Time</a>
+          </div>
+          <div class="schedule-card">
+            <h3>30-Minute Demo</h3>
+            <p>Walk through the platform, see the decision engine in action, and ask anything.</p>
+            <!-- TODO: Replace with your Calendly link -->
+            <a href="https://calendly.com/nextmove/demo" class="btn-schedule">Book a Demo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BOTTOM -->
+    <section class="cta-bottom" id="notify" aria-labelledby="cta-heading">
+      <div class="container">
+        <p class="section-label">Stay updated</p>
+        <h2 id="cta-heading">Be the first to know</h2>
+        <p class="section-text" style="margin: 0 auto 2rem;">
+          We're live in New York and expanding to all 50 states. Sign up for updates and early access as we roll out new states and modules.
+        </p>
+        <form class="email-form" id="bottom-form" aria-label="Email signup">
+          <label for="bottom-email" class="sr-only">Email address</label>
+          <input type="email" id="bottom-email" name="email" placeholder="Enter your email" required autocomplete="email">
+          <button type="submit" class="btn-primary">Get Notified</button>
+        </form>
+        <p class="form-note">No spam. Unsubscribe anytime.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <p class="footer-left">&copy; 2026 Next Move Technologies, Inc. All rights reserved. Next Move&trade; is a trademark of Next Move Technologies, Inc. (USPTO filing pending.)</p>
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="mailto:hello@nextmove.one">Contact</a>
+        <a href="mailto:investors@nextmove.one">Investor Inquiries</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FORM HANDLING (placeholder — replace with real endpoint) -->
+  <script>
+    document.querySelectorAll('.email-form').forEach(function(form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var email = form.querySelector('input[type="email"]').value;
+        if (email) {
+          // TODO: Replace with actual email service (Mailchimp, ConvertKit, etc.)
+          console.log('Email signup:', email);
+          form.classList.add('success');
+        }
+      });
+    });
+
+    // Demo form handler
+    var demoForm = document.getElementById('demo-form');
+    if (demoForm) {
+      demoForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var name = document.getElementById('demo-name').value;
+        var email = document.getElementById('demo-email').value;
+        var phone = document.getElementById('demo-phone').value;
+        var org = document.getElementById('demo-org').value;
+        var role = document.getElementById('demo-role').value;
+        if (name && email) {
+          // TODO: Replace with actual form endpoint (Formspree, Netlify Forms, etc.)
+          console.log('Demo request:', { name: name, email: email, phone: phone, organization: org, role: role });
+          demoForm.classList.add('success');
+        }
+      });
+    }
+  </script>
+
+</body>
+            </html>
