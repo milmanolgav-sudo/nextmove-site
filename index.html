@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Next Move — Decision Training for Life's Biggest Transitions</title>
-  <meta name="description" content="Next Move is a decision training platform for high-stakes life transitions — reentry from incarceration, veteran transition, foster care aging out, domestic violence recovery, court navigation, and more.">
+  <title>Next Move â Decision Training for Life's Biggest Transitions</title>
+  <meta name="description" content="Next Move is a decision training platform for high-stakes life transitions â reentry from incarceration, veteran transition, foster care aging out, domestic violence recovery, court navigation, and more.">
   <meta name="keywords" content="decision training, life transitions, reentry, veteran transition, foster care, domestic violence support, court navigation, recovery support, corrections technology, life skills training">
   <meta name="author" content="Next Move Technologies, Inc.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://nextmove.one/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Next Move — Decision Training for Life's Biggest Transitions">
+  <meta property="og:title" content="Next Move â Decision Training for Life's Biggest Transitions">
   <meta property="og:description" content="A decision training platform helping people practice the choices that shape their future. Now live in New York, expanding to all 50 states.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nextmove.one/">
@@ -20,7 +20,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Next Move — Decision Training for Life's Biggest Transitions">
+  <meta name="twitter:title" content="Next Move â Decision Training for Life's Biggest Transitions">
   <meta name="twitter:description" content="A decision training platform helping people practice the choices that shape their future.">
 
   <!-- Schema.org JSON-LD -->
@@ -30,7 +30,7 @@
     "@type": "Organization",
     "name": "Next Move Technologies, Inc.",
     "url": "https://nextmove.one",
-    "description": "Decision training platform for high-stakes life transitions — reentry, veteran transition, foster care, domestic violence recovery, court navigation, and beyond.",
+    "description": "Decision training platform for high-stakes life transitions â reentry, veteran transition, foster care, domestic violence recovery, court navigation, and beyond.",
     "foundingDate": "2025",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -48,6 +48,68 @@
     "@type": "WebSite",
     "name": "Next Move",
     "url": "https://nextmove.one"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Next Move",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Web",
+    "description": "Decision training platform for high-stakes life transitions. Interactive branching scenarios for reentry, veteran transition, foster care, and more.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free for individuals. B2B licensing for agencies."
+    },
+    "availableLanguage": ["English", "Spanish", "French", "Haitian Creole"],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Next Move Technologies, Inc.",
+      "url": "https://nextmove.one"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Next Move?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Next Move is a decision training platform for high-stakes life transitions. It uses interactive branching scenarios where every choice has consequences, helping people practice difficult decisions before the stakes are real. The first module serves reentry from incarceration and alternative-to-incarceration programs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What languages does Next Move support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Next Move ships in four languages from day one: English, Spanish, French, and Haitian Creole."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Next Move cost anything for individuals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Next Move never charges the people it serves. Revenue comes from B2B SaaS contracts with Departments of Corrections and community supervision agencies."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What devices does Next Move work on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Next Move runs on correctional tablets (Securus, ViaPath, Orijin), smartphones, and any device with a web browser. No downloads or accounts required."
+        }
+      }
+    ]
   }
   </script>
 
@@ -102,12 +164,15 @@
     }
 
     .logo {
-      font-size: 1.4rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: var(--text-primary);
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
     }
-    .logo span { color: var(--accent); }
+    .logo img {
+      height: 44px;
+      width: auto;
+      display: block;
+    }
 
     .nav-links { display: flex; gap: 2rem; align-items: center; }
     .nav-links a {
@@ -724,7 +789,7 @@
 
   <!-- NAVIGATION -->
   <nav role="navigation" aria-label="Main navigation">
-    <a href="/" class="logo" aria-label="Next Move home">Next<span>Move</span></a>
+    <a href="/" class="logo" aria-label="Next Move home"><img src="logo.svg" alt="Next Move"></a>
     <div class="nav-links">
       <a href="about.html">About</a>
       <a href="#demo">Request Demo</a>
@@ -737,7 +802,7 @@
     <span class="hero-badge" aria-hidden="true">Now Live in New York</span>
     <h1>Practice the decisions<br>that <span class="highlight">change everything</span></h1>
     <p class="hero-sub">
-      Next Move is a decision training platform for life's highest-stakes transitions —
+      Next Move is a decision training platform for life's highest-stakes transitions â
       built by people with lived experience in every area the platform touches.
       We help people practice the choices that determine whether they rebuild successfully.
     </p>
@@ -758,24 +823,24 @@
         <h2 id="problem-heading">High-stakes transitions<br>deserve better preparation</h2>
         <p class="section-text">
           Millions of people face life-defining transitions every year with no safe way to practice the decisions ahead.
-          The consequences of being unprepared are devastating — for individuals, families, and communities.
+          The consequences of being unprepared are devastating â for individuals, families, and communities.
         </p>
 
         <div class="problem-grid" role="list">
           <article class="stat-card" role="listitem">
             <p class="stat-number">1.9M</p>
             <p class="stat-label">Reentry &amp; ATI programs</p>
-            <p class="stat-desc">People leaving incarceration and those in alternative-to-incarceration programs face an overwhelming cascade of decisions — housing, employment, supervision, benefits — with razor-thin margins for error. Launching in New York, expanding to all 50 states.</p>
+            <p class="stat-desc">People leaving incarceration and those in alternative-to-incarceration programs face an overwhelming cascade of decisions â housing, employment, supervision, benefits â with razor-thin margins for error. Launching in New York, expanding to all 50 states.</p>
           </article>
           <article class="stat-card" role="listitem">
             <p class="stat-number">200K+</p>
             <p class="stat-label">Veterans transitioning yearly</p>
-            <p class="stat-desc">Nearly half of post-9/11 veterans report difficulty transitioning to civilian life — navigating benefits, employment, housing, and healthcare systems simultaneously.</p>
+            <p class="stat-desc">Nearly half of post-9/11 veterans report difficulty transitioning to civilian life â navigating benefits, employment, housing, and healthcare systems simultaneously.</p>
           </article>
           <article class="stat-card" role="listitem">
             <p class="stat-number">20K+</p>
             <p class="stat-label">Youth aging out of foster care</p>
-            <p class="stat-desc">Every year, young people age out of the foster system with no safety net — facing housing, finances, healthcare, and legal decisions alone for the first time.</p>
+            <p class="stat-desc">Every year, young people age out of the foster system with no safety net â facing housing, finances, healthcare, and legal decisions alone for the first time.</p>
           </article>
           <article class="stat-card" role="listitem">
             <p class="stat-number">Millions</p>
@@ -792,7 +857,7 @@
         <p class="section-label">Our approach</p>
         <h2 id="approach-heading">Learn by doing, not by reading</h2>
         <p class="section-text">
-          Next Move uses interactive decision training — realistic branching scenarios where every choice has consequences.
+          Next Move uses interactive decision training â realistic branching scenarios where every choice has consequences.
           Players navigate the same decisions they'll face in real life, building judgment before the stakes are real.
         </p>
 
@@ -800,17 +865,17 @@
           <article class="feature" role="listitem">
             <div class="feature-icon" aria-hidden="true">&#x1F3AF;</div>
             <h3>Realistic Scenarios</h3>
-            <p>Every decision node is grounded in real-world data — actual housing rules, benefit eligibility, court procedures, and employment barriers specific to each state and situation.</p>
+            <p>Every decision node is grounded in real-world data â actual housing rules, benefit eligibility, court procedures, and employment barriers specific to each state and situation.</p>
           </article>
           <article class="feature" role="listitem">
             <div class="feature-icon" aria-hidden="true">&#x1F30D;</div>
             <h3>Four Languages</h3>
-            <p>Built from day one in English, Spanish, French, and Haitian Creole — reaching communities that other platforms overlook entirely.</p>
+            <p>Built from day one in English, Spanish, French, and Haitian Creole â reaching communities that other platforms overlook entirely.</p>
           </article>
           <article class="feature" role="listitem">
             <div class="feature-icon" aria-hidden="true">&#x1F4F1;</div>
             <h3>Built for Access</h3>
-            <p>Runs on any device — correctional tablets, phones, shared computers at shelters and reentry programs, VA resource centers, courthouses, and public libraries. No downloads, no accounts, no personal information collected.</p>
+            <p>Runs on any device â correctional tablets, phones, shared computers at shelters and reentry programs, VA resource centers, courthouses, and public libraries. No downloads, no accounts, no personal information collected.</p>
           </article>
           <article class="feature" role="listitem">
             <div class="feature-icon" aria-hidden="true">&#x1F5FA;</div>
@@ -820,7 +885,7 @@
           <article class="feature" role="listitem">
             <div class="feature-icon" aria-hidden="true">&#x1F91D;</div>
             <h3>Lived Experience at Every Level</h3>
-            <p>Our team, advisors, and content reviewers include people with direct experience across every transition the platform serves — incarceration, reentry, housing instability, recovery, domestic violence, court systems, and more. We build with communities, not just for them.</p>
+            <p>Our team, advisors, and content reviewers include people with direct experience across every transition the platform serves â incarceration, reentry, housing instability, recovery, domestic violence, court systems, and more. We build with communities, not just for them.</p>
           </article>
         </div>
       </div>
@@ -832,7 +897,7 @@
         <p class="section-label">Multilingual by design</p>
         <h2 id="lang-heading">Meeting people where they are</h2>
         <p class="section-text">
-          Language access isn't an afterthought — it's foundational. Next Move ships in four languages from launch, because the communities most affected deserve tools that speak their language.
+          Language access isn't an afterthought â it's foundational. Next Move ships in four languages from launch, because the communities most affected deserve tools that speak their language.
         </p>
         <div class="lang-grid" role="list">
           <span class="lang-tag" role="listitem">English</span>
@@ -896,25 +961,25 @@
         <p class="section-label">Traction &amp; partnerships</p>
         <h2 id="traction-heading">Already in motion</h2>
         <p class="section-text">
-          Next Move isn't a concept — it's a product with institutional partners, an evidence-based evaluation,
+          Next Move isn't a concept â it's a product with institutional partners, an evidence-based evaluation,
           and a clear path to national scale.
         </p>
 
         <div class="traction-grid" role="list">
           <article class="traction-item" role="listitem">
-            <h3>CASES NYC — Phase 1 Launch Partner</h3>
+            <h3>CASES NYC â Phase 1 Launch Partner</h3>
             <p>One of the nation's oldest alternative-to-incarceration programs (founded 1967, 9,500+ diverted annually). Phase 1 pilot for reentry and ATI decision training.</p>
           </article>
           <article class="traction-item" role="listitem">
-            <h3>Ithaka S+R — Evaluation Partner</h3>
+            <h3>Ithaka S+R â Evaluation Partner</h3>
             <p>200-participant quasi-experimental study over a 2-year timeline, measuring real-world outcomes including engagement, completion, knowledge gain, and recidivism reduction.</p>
           </article>
           <article class="traction-item" role="listitem">
             <h3>Distribution Reach</h3>
-            <p>Built for the tablet platforms that already operate inside 6,270+ US correctional facilities — Securus, ViaPath, and Orijin — reaching incarcerated populations at scale.</p>
+            <p>Built for the tablet platforms that already operate inside 6,270+ US correctional facilities â Securus, ViaPath, and Orijin â reaching incarcerated populations at scale.</p>
           </article>
           <article class="traction-item" role="listitem">
-            <h3>BMCC — Authenticity Pipeline</h3>
+            <h3>BMCC â Authenticity Pipeline</h3>
             <p>Student developers with lived experience contribute to content development and authenticity review, ensuring every scenario reflects the real decisions people face.</p>
           </article>
         </div>
@@ -922,7 +987,7 @@
         <div class="business-model">
           <p>
             <strong>How it works:</strong> Next Move is a B2B SaaS platform. Departments of Corrections and community supervision agencies
-            license the platform annually on a per-facility basis. We never charge incarcerated individuals or their families — not for
+            license the platform annually on a per-facility basis. We never charge incarcerated individuals or their families â not for
             reentry, not for any module we build. Revenue comes from the institutions responsible for outcomes.
           </p>
         </div>
@@ -935,13 +1000,13 @@
         <p class="section-label">For investors</p>
         <h2 id="investor-heading">Funding what works</h2>
         <p class="section-text">
-          Next Move sits at the intersection of criminal justice reform, edtech, and social impact — backed by
+          Next Move sits at the intersection of criminal justice reform, edtech, and social impact â backed by
           federal funding momentum, institutional partnerships, and a market that's ready for evidence-based solutions.
         </p>
 
         <div class="investor-box">
           <p>
-            If you're an investor interested in social impact, corrections technology, or edtech —
+            If you're an investor interested in social impact, corrections technology, or edtech â
             we'd welcome a conversation about what we're building and where we're headed.
           </p>
           <a href="mailto:investors@nextmove.one" class="investor-email">investors@nextmove.one</a>
@@ -961,21 +1026,19 @@
         <h2 id="schedule-heading">Schedule a conversation</h2>
         <p class="section-text">
           Whether you're exploring a partnership, evaluating the platform for your agency,
-          or want to learn more about what we're building — pick a time that works for you.
+          or want to learn more about what we're building â pick a time that works for you.
         </p>
 
         <div class="schedule-options">
           <div class="schedule-card">
             <h3>15-Minute Intro</h3>
             <p>Quick overview of Next Move and how it might fit your organization.</p>
-            <!-- TODO: Replace with your Calendly link -->
-            <a href="https://calendly.com/nextmove/intro" class="btn-schedule-primary">Book a Time</a>
+            <a href="mailto:hello@nextmove.one?subject=Next%20Move%20-%2015-Minute%20Intro%20Request" class="btn-schedule-primary">Schedule an Intro</a>
           </div>
           <div class="schedule-card">
             <h3>30-Minute Demo</h3>
             <p>Walk through the platform, see the decision engine in action, and ask anything.</p>
-            <!-- TODO: Replace with your Calendly link -->
-            <a href="https://calendly.com/nextmove/demo" class="btn-schedule">Book a Demo</a>
+            <a href="mailto:hello@nextmove.one?subject=Next%20Move%20-%20Demo%20Request" class="btn-schedule">Request a Demo</a>
           </div>
         </div>
       </div>
@@ -1006,27 +1069,67 @@
       <p class="footer-left">&copy; 2026 Next Move Technologies, Inc. All rights reserved. Next Move&trade; is a trademark of Next Move Technologies, Inc. (USPTO filing pending.)</p>
       <div class="footer-links">
         <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
         <a href="mailto:hello@nextmove.one">Contact</a>
         <a href="mailto:investors@nextmove.one">Investor Inquiries</a>
       </div>
     </div>
   </footer>
 
-  <!-- FORM HANDLING (placeholder — replace with real endpoint) -->
+  <!-- FORM HANDLING -->
+  <!--
+    HUBSPOT CRM INTEGRATION
+    ========================
+    Forms submit to HubSpot via the Forms API.
+    Leads appear in HubSpot CRM and trigger notifications to Olga + Stacy.
+
+    SETUP: Replace YOUR_PORTAL_ID, YOUR_EMAIL_FORM_GUID, and YOUR_DEMO_FORM_GUID
+    with your actual HubSpot values.
+
+    To find these:
+    1. Log into HubSpot â Marketing â Forms
+    2. Create two forms: "Website Email Signup" and "Website Demo Request"
+    3. Portal ID: Settings â Account Management â Account Info (top of page)
+    4. Form GUID: Edit form â Share â Form ID shown in embed code
+    5. Set up workflow: Automation â Workflows â trigger on form submission
+       â Send notification email to milman.olgav@gmail.com and Stacy
+  -->
   <script>
+    var HUBSPOT_PORTAL_ID = 'YOUR_PORTAL_ID';
+    var HUBSPOT_EMAIL_FORM_GUID = 'YOUR_EMAIL_FORM_GUID';
+    var HUBSPOT_DEMO_FORM_GUID = 'YOUR_DEMO_FORM_GUID';
+
+    // Email signup forms (hero + bottom)
     document.querySelectorAll('.email-form').forEach(function(form) {
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         var email = form.querySelector('input[type="email"]').value;
         if (email) {
-          // TODO: Replace with actual email service (Mailchimp, ConvertKit, etc.)
-          console.log('Email signup:', email);
-          form.classList.add('success');
+          fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + HUBSPOT_PORTAL_ID + '/' + HUBSPOT_EMAIL_FORM_GUID, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              fields: [{ name: 'email', value: email }],
+              context: {
+                pageUri: window.location.href,
+                pageName: document.title
+              }
+            })
+          }).then(function(response) {
+            if (response.ok) {
+              form.classList.add('success');
+            } else {
+              alert('Something went wrong. Please try again or email us at hello@nextmove.one');
+            }
+          }).catch(function() {
+            alert('Connection error. Please email us directly at hello@nextmove.one');
+          });
         }
       });
     });
 
-    // Demo form handler
+    // Demo request form
     var demoForm = document.getElementById('demo-form');
     if (demoForm) {
       demoForm.addEventListener('submit', function(e) {
@@ -1036,14 +1139,38 @@
         var phone = document.getElementById('demo-phone').value;
         var org = document.getElementById('demo-org').value;
         var role = document.getElementById('demo-role').value;
+
         if (name && email) {
-          // TODO: Replace with actual form endpoint (Formspree, Netlify Forms, etc.)
-          console.log('Demo request:', { name: name, email: email, phone: phone, organization: org, role: role });
-          demoForm.classList.add('success');
+          fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + HUBSPOT_PORTAL_ID + '/' + HUBSPOT_DEMO_FORM_GUID, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              fields: [
+                { name: 'firstname', value: name.split(' ')[0] },
+                { name: 'lastname', value: name.split(' ').slice(1).join(' ') || '' },
+                { name: 'email', value: email },
+                { name: 'phone', value: phone },
+                { name: 'company', value: org },
+                { name: 'jobtitle', value: role }
+              ],
+              context: {
+                pageUri: window.location.href,
+                pageName: 'Next Move - Demo Request'
+              }
+            })
+          }).then(function(response) {
+            if (response.ok) {
+              demoForm.classList.add('success');
+            } else {
+              alert('Something went wrong. Please try again or email us at hello@nextmove.one');
+            }
+          }).catch(function() {
+            alert('Connection error. Please email us directly at hello@nextmove.one');
+          });
         }
       });
     }
   </script>
 
 </body>
-            </html>
+</html>
